@@ -1,0 +1,12 @@
+array = [123,1234,2,312,23]
+def findmin(inlist):
+    'assumes unique integers'
+    if len(inlist)==1:
+        return inlist[0]
+    else:
+        if inlist[0] > inlist[1]:
+            del inlist[0]
+        else:
+            del inlist[1]
+        return findmin(inlist)
+print findmin(array)

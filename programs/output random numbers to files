@@ -1,0 +1,9 @@
+import random
+
+for i in range(5):
+    b = []
+    for j in range(250): b.append(random.randint(0,9))
+    text_file = open("Output" + str(i) +".txt", "w")
+    text_file.write(''.join(map(str,b)))
+    text_file.close()
+    print 'done ' + str(i)

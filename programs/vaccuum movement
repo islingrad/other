@@ -1,0 +1,15 @@
+def vaccuum(pos, move1, move2, move3, move4,move5):
+    #pos is list #R is 1 #L is -1
+    movement = move1+move2+move3+move4+move5
+    start = pos.index('*')
+    pos[pos.index('*')] = '.'
+    end = start +movement
+    if end < 0:
+        end = 0
+    if end >4:
+        end = 4
+    pos[end] = '*'
+    lol = ''.join(pos)
+    return lol
+    
+print vaccuum(['.','.','.','*','.'], -1,-1,1,1,-1)

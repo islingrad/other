@@ -1,0 +1,27 @@
+def trap_area(baseone, basetwo, height):
+    return (height*(baseone+basetwo))/2
+
+def f(x):
+  a = x**5
+  b = x**4
+  c = x**2
+  return 5*a-10*b+5*c+30
+
+def integrate(xlo, xhi, threshold = .1):
+    
+    area_accumulator = 0
+    movement = 0
+    start = f(xlo)
+    repeat = 1/threshold
+    height = (xhi-xlo)/repeat
+    for i in range(int(repeat)):
+        baselo = (f(xlo+movement))
+        basehi = (f(xlo+movement+height))
+        area_accumulator += trap_area(baselo, basehi, height)
+        movement += height
+    return area_accumulator    
+
+print integrate(0,1, 0.0001)
+print integrate(1,7, 0.0001)
+print integrate(3,7.5, 0.0001)
+print integrate(0,1, 0.1)

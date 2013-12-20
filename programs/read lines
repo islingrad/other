@@ -1,0 +1,5 @@
+with open("tutorial_production.txt") as f:
+    content = f.readlines()
+
+for i in content:
+    raw_input(i + "---- hit enter to continue")

@@ -1,0 +1,139 @@
+#!/usr/local/bin/python2.7
+    
+print "Hello World!\n";
+
+
+def start():
+  global grid
+  numbers = range(1,10)
+  count = 0
+  for i in numbers:
+    numbers[count] = [i, 'empty']
+    count += 1
+  grid = numbers
+
+def status():
+  global a,b,c,d,e,f,g,h,i
+  a =grid[0][1]
+  b =grid[1][1]
+  c=grid[2][1]
+  d=grid[3][1]
+  e=grid[4][1]
+  f=grid[5][1]
+  g=grid[6][1]
+  h=grid[7][1]
+  i=grid[8][1]
+  
+  print  a+' ' + b + ' ' +c
+  print  d+' ' +  e+ ' ' +f
+  print  g+' ' +  h+ ' ' +i
+  
+def gridtest(loc):
+  emp ='empty'
+  if loc == 0 and a == emp:
+    return True
+  if loc == 1 and b == emp:
+    return True
+  if loc == 2 and c == emp:
+    return True
+  if loc == 3 and d == emp:
+    return True
+  if loc == 4 and e == emp:
+    return True
+  if loc == 5 and f == emp:
+    return True
+  if loc == 6 and g == emp:
+    return True
+  if loc == 7 and h == emp:
+    return True
+  if loc == 8 and i == emp:
+    return True
+  else:
+    return False
+
+def win_test():
+  emp = 'empty'
+  if a!= 'empty':
+    if a ==b and b==c:
+      print 'WIN'
+      return True
+    if a==d and d==g:
+      print 'WIN'
+      return True
+    if a==e and a ==i:
+      print 'WIN'
+      return True
+  if b != 'empty':
+    if b ==e and e ==h:
+      print 'WIN'
+      return True
+  if c != 'empty':
+    if c==f and f==i:
+      print 'WIN'
+      return True
+  if d != emp:
+    if d ==e and e ==f:
+      print 'WIN'
+      return True
+  if g != emp:
+    if g==h and h ==i:
+      print 'WIN'
+      return True
+  else:
+    return False
+def turn(player, move):
+  
+  if move == 0 and gridtest(move)==True:
+    grid[0][1] = str(player)
+    status()
+    
+  if move == 1 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+    
+  if move == 2 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+    
+  if move == 3 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+    
+  if move == 4 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+    
+  if move == 5 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+  if move == 6 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+    
+  if move == 7 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+    
+  if move == 8 and gridtest(move)==True:
+    grid[move][1] = str(player)
+    status()
+  
+  if win_test() == False:
+    pass
+  
+    #if player ==1:
+      #next = int(raw_input("Where would first player like to play (0-8)"))
+      #turn(0, next)
+    
+    #if player == 0
+      #next = int(raw_input("Where would second player like to play (1-8)"))
+      #turn(1, next)
+  if win_test() == True:
+    print 'Gameover'
+  
+start()
+status()
+print ''
+turn(0,0)
+turn(0,2)
+turn(0,1)

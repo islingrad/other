@@ -1,0 +1,17 @@
+def replace_string(base, target, rep):
+    if target == rep:
+        return base
+    for i in base:
+        print i
+    word= list(base)
+    search = list(target)
+    target_length = len(search)
+
+    if search[0] not in word:
+        return False
+    count = 0
+    
+
+print replace_string("This is a book","is","the")
+
+

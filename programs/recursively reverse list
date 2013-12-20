@@ -1,0 +1,8 @@
+def reverse(inlist):
+    if inlist == []:
+        return []
+    else:
+        a = inlist[0]
+        del inlist[0]
+        return reverse(inlist) + [a]
+print reverse([5,4,3,2,1])

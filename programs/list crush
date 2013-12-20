@@ -1,0 +1,31 @@
+##ltc = [123,[123,22,231],[2312,321,[23,[231]]]]
+##finallist= []
+##while ltc != []:
+##    if ltc[len(ltc)-1] != list:
+##        finallist.insert(0,ltc[0])
+##        del ltc[len(ltc)-1]
+##    if ltc[len(ltc)-1] == list:
+##        for i in ltc[len(ltc)-1]:
+##            ltc.append(i)
+##print ltc
+##print finallist
+##print finallist==ltc
+
+ltc = [123,[123,22,231],[2312,321,[23,[231]]]]
+tt = ltc
+def crush(ltc):
+    finallist= []
+    while ltc != []:
+
+        a = ltc[len(ltc)-1]
+
+        if type(a) != list:
+            finallist.insert(0,a)
+            del ltc[len(ltc)-1]
+
+        else:
+            gg = ltc.pop()
+            for i in gg:
+              ltc.append(i)
+
+    return  finallist

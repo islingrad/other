@@ -1,0 +1,13 @@
+hi = [123,[123,3,2,[21]],321,range(sum(range(5)))]
+final_list = []
+def listcrush(inlist):
+    if inlist == []:
+        
+        return inlist
+    else:
+        if type(inlist[0]) == list:
+            return listcrush(inlist[0]) + listcrush(inlist[1:])
+        else:
+            final_list.append(inlist[0])
+            return [inlist[0]] + listcrush(inlist[1:])
+print listcrush(hi)

@@ -1,0 +1,11 @@
+def age_check(day,month,year):
+    #27 10 1997
+    if day <=27 and month <=10 and year <= 1997:
+        return 'old enough'
+    else:
+        return 'too  young'
+
+print age_check(28, 10, 1997)
+print age_check(27, 10, 1997)
+print age_check(26, 11, 1997)
+print age_check(28, 9, 1998)

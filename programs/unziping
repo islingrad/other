@@ -1,0 +1,28 @@
+##x = 1
+##b = "\\"
+##nothing = str(90052)
+##
+##while x ==1:
+##    c = nothing + ".txt"
+##    text_file = open(c,"r")
+##    str = text_file.readlines()
+##    a = [int(s) for s in str[0].split() if s.isdigit()]
+##    text_file.close()
+##    nothing = int(a[0])
+##    pool_day = str(nothing)
+##    print pool_day
+x = 1
+b = "\\"
+nothing = str(90052)
+
+
+c = '90052' + ".txt"
+text_file = open(c,"r")
+str = text_file.readlines()
+a = [int(s) for s in str[0].split() if s.isdigit()]
+text_file.close()
+print a
+nothing = a[0]
+
+for i in str(nothing):
+    print i

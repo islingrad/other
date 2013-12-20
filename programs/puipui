@@ -1,0 +1,31 @@
+#import pickle
+
+#print pickle.load(open("dump.p","rb"))
+
+##final_list= []
+##
+##def crush(input_list):
+##    
+##    if input_list ==[]:
+##        
+##        return
+##        #return final_list , 'printing from empty list'
+##    
+##    left = input_list[0]
+##    
+##    right = input_list[1:]
+##
+##    if type(left) == list:
+##        return crush(left) , crush(right)
+##    
+##    if type(left) != list :
+##        final_list.append(left)
+##        return crush(right)
+
+crush = ([[[[[[123,123123,34342,2342,[234,234,[2343,2],'kim chi']]]]]]])
+
+for i in crush:
+    if type(i) == list:
+        list_test = True
+        while list_test==True:
+            

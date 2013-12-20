@@ -1,0 +1,15 @@
+
+    
+print "Hello World!\n";
+def sum_numbers(input_list):
+    print input_list
+    if len(input_list) == 1:
+        return input_list[0]
+    else:
+        first = input_list[0]
+        input_list[len(input_list)-1] +=first
+        del input_list[0]
+        
+        
+        return sum_numbers(input_list)
+print sum_numbers(range(1,101))

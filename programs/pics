@@ -1,0 +1,4 @@
+f = open("yess.txt", "r")
+var = f.readlines()
+for i in var:
+    print i

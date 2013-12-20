@@ -1,0 +1,16 @@
+##Write a Python function number_pairs which consumes a natural positive number n, and reads in n 
+##pairs of natural positive numbers from the user. Each pair represents a value and its frequency. For each 
+##pair, the function must prompt the user to input two positive integers the value and its frequency, while 
+##indicating the index of the expected pair. The process repeats until all n pairs have been entered. At the 
+##end, the function should print the average of the n pairs of numbers (of float type). You may assume that 
+##the user only inputs valid data. The function does not produce any value. A sample run of the function is 
+##included below. Note the use of italics and bold to indicate the values input by the user while the program 
+##is executing. Of course, your program should work for any value of n. 
+
+lol = 150+60
+print float(210)/13
+
+for i in range(5):
+    text_file = open("Output" + str(i) +".txt", "w")
+    text_file.write("test")
+    text_file.close()

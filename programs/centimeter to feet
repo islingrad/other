@@ -1,0 +1,16 @@
+def ctof(cents):
+    inches = cents/2.54
+    feet = str(int(inches/12))
+    ftinches = str(int(inches%12))
+    if ftinches == 1:
+        icheck = ' inch.'
+    if ftinches != 1:
+        icheck = ' inches.'
+    if feet != 1:
+        fcheck = ' feet '
+    if feet == 1:
+        fcheck = ' foot '
+        
+    return feet + fcheck + ftinches + icheck
+
+print ctof(120)

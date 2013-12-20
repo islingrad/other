@@ -1,0 +1,32 @@
+Each player starts with a base with 100 HP
+If a player's base reaches 0 HP, they are removed from the game.
+The last player remaining is the winner!
+
+
+PRODUCTION
+Each turn you may produce: 
+Cost $5 Army-(attack/defend unit
+Cost $1 Workers-(Collect 1 gold tax per turn from them)
+Cost $3 Factories - (The number of workers/armies/factories you can produce each turn is equal to the amount of factories you started the turn with)
+Cost $3 Spy - Espionage unit
+To produce you must enter the amount you want to SPEND
+Production will round down if you enter a non-multiple value
+For example, you want to produce armies, and you say that you would like to spend $9
+That will be rounded down to the nearest multiple of $5 (the cost of an army), and you will only be charged $5
+
+
+
+ATTACK/ESPIONAGE
+When attacking the defender has a 3 army defensive base bonus
+If the attackers army overwhelms the defender, they may chose to target the defenders base or the defenders workers/production
+Players may espionage other players at a cost of 2 spies to see the other players full stats, or 1 worker for each individual stat
+
+
+RANDOM EVENTS
+If you choose to activate random events, random events will happen!
+These events may greatly imbalance the game.
+Enjoy!
+
+
+
+## AN ISLINGRAD-WELSH PRODUCTION ##

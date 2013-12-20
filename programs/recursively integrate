@@ -1,0 +1,52 @@
+import sys
+sys.setrecursionlimit(20000)
+
+def trap_area(baseone, basetwo, height):
+    return (height*(baseone+basetwo))/2
+#baseone is f(x1).... basetwo is f(x2)...... height is xhi-xlo/(1/threshold)
+
+def f(x):
+  a = x**5
+  b = x**4
+  c = x**2
+  return 5*a-10*b+5*c+30
+
+##def integrate(xlo, xhi, threshold = .1):
+##    
+##    area_accumulator = 0
+##    movement = 0
+##    start = f(xlo)
+##    repeat = 1/threshold
+##    height = (xhi-xlo)/repeat
+##    for i in range(int(repeat)):
+##        baselo = (f(xlo+movement))
+##        basehi = (f(xlo+movement+height))
+##        area_accumulator += trap_area(baselo, basehi, height)
+##        movement += height
+##    return area_accumulator    
+
+def integrate2(x1,movement, count_ops):
+    if count_ops <=0:
+        return 0
+    else:
+        lower = x1
+        higher = x1 +movement
+        holding = trap_area(f(lower),f(higher),movement)
+        count_ops-=1
+        
+        return holding + integrate2(higher, movement, count_ops)
+        
+
+
+def integrate(xlo,xhi,threshold):
+    movement = (xhi-xlo)/(1/threshold)
+    count_ops = 1/threshold
+    return integrate2(xlo,movement,count_ops)
+    
+    
+
+
+print integrate(0,1, 0.0001)
+print integrate(1,7, 0.0001)
+print integrate(3,7.5, 0.001)
+print integrate(0,1, 0.01)

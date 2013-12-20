@@ -1,0 +1,15 @@
+def answer_check(n):
+    check_list = []
+    num_list = range(10)
+    string_number = str(n)
+    if len(list(string_number)) != 9:
+        return False
+    else:
+        for i in string_number:
+            check_list.append(int(i))
+        check_list.sort()
+        if check_list == num_list:
+            return True
+        else:
+            return False
+        

@@ -1,0 +1,11 @@
+bob = ['a',223,123]
+
+def printing(inlist):
+    if inlist ==[]:
+        return []
+    else:
+        print inlist[0]
+        del inlist[0]
+        return printing(inlist)
+
+printing(bob)

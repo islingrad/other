@@ -1,0 +1,82 @@
+def crush(ltc):
+    'crushes a list'
+    finallist= []
+    while ltc != []:
+
+        a = ltc[len(ltc)-1]
+
+        if type(a) != list:
+            finallist.insert(0,a)
+            del ltc[len(ltc)-1]
+        else:
+            gg = ltc.pop()
+            for i in gg:
+              ltc.append(i)
+
+    return  finallist
+
+def listcopy(orgin, target):
+    'copies a list'
+    for p in orgin:
+        target.append(p)
+
+
+def smushlist(listone,listtwo):
+
+    counter = 0
+    for i in listone:
+        if type(i) == list:
+            for element in i:
+                listtwo[counter].append(element)
+        counter +=1
+    print listtwo
+
+##def subsets(input_list):
+##    allsubs = [[input_list[0]]]
+##    while input_list !=[]:    
+##        input_list.pop(0)
+##        temp_list = []
+##        listcopy(allsubs, temp_list)
+##        print temp_list , 'temp'
+##        for sublist in temp_list:
+##            print sublist , 'sublist'
+##            element.append(input_list[0])
+##        allsubs.append(temp_list)
+##        allsubs.append([input_list[0]])
+##        print allsubs, 'allsubs'
+##  
+    
+##def subsets(input_list):
+##    ' this outputs all single element lists'
+##    allsubs =[]
+##    list_length = len(input_list)
+##    listcopy(input_list, allsubs)
+##    for i in range(list_length):
+##        allsubs[i] = [allsubs[i]]
+##    
+##    print allsubs
+                
+
+
+##def subsets(input_list):
+##    ' doesnt do anything useful'
+##    counter = 1
+##    all_subs = [[]] #create a list with only one subset (empty set)
+##    
+##    for i in input_list:
+##        hold_list =[] # reset hold_list to empty
+##        listcopy(all_subs, hold_list) #bring every previously generated subsets into a hold list
+##        
+##        for j in hold_list:         # iterate through the elements that have been copied to hold_list(all previously generated subsets)
+##            j.append(i)             # mutate sublists in hold_list with addition of element in input_list
+##            print hold_list, 'hold list'
+##        print counter, " pass"
+##        counter +=1
+##        all_subs.append(hold_list)  # add the newly appended subsets being held in hold_list to all_subs
+##        all_subs.append([i])        # add the lone input_list element as a subset to the final subset list
+##        print all_subs
+##    print 'final'
+##    print all_subs 
+
+input_list  =  range(1, 3)
+subsets(input_list)

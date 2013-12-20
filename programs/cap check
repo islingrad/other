@@ -1,0 +1,67 @@
+
+def fix_cap():
+    input_string = "         .hi.how is everyone at i.b.m. today? fine, I hope! good 4 u.u . bye            "
+    c = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    l = 'abcdefghijklmnopqrstuvwxyz'
+    expanded =  list(input_string)
+    caps = list(c)
+    lows = list(l)
+####remove spaces at beginning and end of string
+    google = 1
+    while google ==1:
+      
+      if expanded[0] == ' ':
+        del expanded[0]
+      if expanded[len(expanded)-1] == ' ':
+        del expanded[len(expanded)-1]
+      if expanded[len(expanded)-1] != ' ' and expanded[0] != ' ':
+        break
+####make first letter of string a cap
+    first = expanded[0]
+    try:
+      
+      first = int(first)
+      first = str(first)
+    except:
+      if first in caps:
+        pass
+      if first in lows:
+        locale = lows.index(first)
+        expanded[0] = caps[locale]
+#########replace character after ! . ? with a capital
+    
+    count = 0
+    for i in expanded:
+      looper = 0
+      if i == '.' or i == '!' or i == '?':
+        purell = int(count)
+        while looper == 0:
+            if expanded[purell] not in caps:
+                purell+=1
+            if expanded[purell] not in lows:
+                purell+=1
+            if expanded[purell] in caps:
+                looper +=1
+            if expanded[purell] in lows:
+    
+                tea = lows.index(expanded[purell])
+                expanded[purell] = caps[tea]
+                looper +=1
+### replace single letters which are followed by a period with cap
+      if count!=0:
+        if i == '.':
+          if expanded[count-2] not in lows and expanded[count-2] not in caps:        
+            if expanded[count-1] in lows:
+              peanuts =  lows.index(expanded[count-1]) 
+              expanded[count-1] = caps[peanuts]
+        
+
+
+
+####################################
+      count +=1
+    
+###########################################      
+    print ''.join(expanded)
+
+fix_cap()
