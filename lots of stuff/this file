@@ -1,0 +1,4 @@
+def output_source_code():
+    f = open('this file', 'r+')
+    return f.read()
+print output_source_code()

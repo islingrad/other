@@ -1,0 +1,6 @@
+f = open('this file', 'r+')
+b =f.read()
+j = open('outfile', 'w+')
+j.write(b)
+
+print b
